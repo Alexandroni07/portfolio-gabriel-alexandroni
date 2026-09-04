@@ -26,7 +26,7 @@ export function Experience() {
                   className="flex w-full items-start justify-between gap-4 py-6 text-left"
                   aria-expanded={isOpen}
                 >
-                  <div>
+                  <div className="min-w-0">
                     <span className="text-sm text-muted-foreground">{exp.period}</span>
                     <h3 className="mt-1 font-display text-lg font-medium text-foreground">
                       {exp.role}

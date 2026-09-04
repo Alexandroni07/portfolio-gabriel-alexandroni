@@ -62,7 +62,7 @@ export function About() {
           initial="hidden"
           whileInView="show"
           viewport={{ once: true, margin: "-80px" }}
-          className="grid gap-4 sm:grid-cols-2 md:grid-cols-1"
+          className="grid gap-4"
         >
           {pillars.map(({ icon: Icon, title, description }) => (
             <motion.div

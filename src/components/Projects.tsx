@@ -28,16 +28,16 @@ export function Projects() {
             <button
               type="button"
               onClick={() => emblaApi?.scrollPrev()}
-              className="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 text-foreground transition-colors hover:bg-white/5"
-              aria-label="Projeto anterior"
+              className="flex h-11 w-11 items-center justify-center rounded-full border border-white/10 text-foreground transition-colors hover:bg-white/5"
+              aria-label="Previous project"
             >
               <ChevronLeft size={18} />
             </button>
             <button
               type="button"
               onClick={() => emblaApi?.scrollNext()}
-              className="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 text-foreground transition-colors hover:bg-white/5"
-              aria-label="Próximo projeto"
+              className="flex h-11 w-11 items-center justify-center rounded-full border border-white/10 text-foreground transition-colors hover:bg-white/5"
+              aria-label="Next project"
             >
               <ChevronRight size={18} />
             </button>

@@ -63,7 +63,7 @@ export function ProjectModal({
         className={`max-h-[95vh] overflow-y-auto border-white/10 bg-[#0b0b0f] p-0 ${
           isGalleryOpen
             ? "h-[70vh] w-[70vw] !max-w-[70vw] max-sm:h-[75vh] max-sm:w-[calc(100vw-1rem)] max-sm:!max-w-[calc(100vw-1rem)]"
-            : "max-w-5xl"
+            : "w-[calc(100vw-2rem)] sm:w-full sm:max-w-5xl"
         }`}
       >
         {isGalleryOpen ? (
@@ -96,10 +96,10 @@ export function ProjectModal({
               type="button"
               onClick={() => setIsGalleryOpen(false)}
               className="absolute left-4 top-4 inline-flex items-center gap-2 rounded-full border border-white/20 bg-black/70 px-3 py-2 text-sm text-white transition-colors hover:bg-black/90"
-              aria-label="Voltar para os detalhes do projeto"
+              aria-label="Back to project details"
             >
               <ArrowLeft size={16} />
-              Voltar
+              Back
             </button>
 
             {images.length > 1 && (
@@ -107,16 +107,16 @@ export function ProjectModal({
                 <button
                   type="button"
                   onClick={() => emblaApi?.scrollPrev()}
-                  className="absolute left-3 top-1/2 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-white/20 bg-black/60 text-white transition-colors hover:bg-black/80"
-                  aria-label="Imagem anterior"
+                  className="absolute left-3 top-1/2 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full border border-white/20 bg-black/60 text-white transition-colors hover:bg-black/80"
+                  aria-label="Previous image"
                 >
                   <ArrowLeft size={18} />
                 </button>
                 <button
                   type="button"
                   onClick={() => emblaApi?.scrollNext()}
-                  className="absolute right-3 top-1/2 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-white/20 bg-black/60 text-white transition-colors hover:bg-black/80"
-                  aria-label="Próxima imagem"
+                  className="absolute right-3 top-1/2 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full border border-white/20 bg-black/60 text-white transition-colors hover:bg-black/80"
+                  aria-label="Next image"
                 >
                   <ArrowRight size={18} />
                 </button>
@@ -156,8 +156,8 @@ export function ProjectModal({
             <button
               type="button"
               onClick={() => setIsGalleryOpen(true)}
-              className="absolute left-3 top-3 flex h-10 w-10 items-center justify-center rounded-full border border-white/20 bg-black/60 text-white transition-colors hover:bg-black/80"
-              aria-label="Ampliar fotos"
+              className="absolute left-3 top-3 flex h-11 w-11 items-center justify-center rounded-full border border-white/20 bg-black/60 text-white transition-colors hover:bg-black/80"
+              aria-label="Expand photos"
             >
               <Maximize2 size={18} />
             </button>
@@ -167,16 +167,16 @@ export function ProjectModal({
                 <button
                   type="button"
                   onClick={() => emblaApi?.scrollPrev()}
-                  className="absolute left-3 top-1/2 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-white/20 bg-black/60 text-white transition-colors hover:bg-black/80"
-                  aria-label="Imagem anterior"
+                  className="absolute left-3 top-1/2 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full border border-white/20 bg-black/60 text-white transition-colors hover:bg-black/80"
+                  aria-label="Previous image"
                 >
                   <ArrowLeft size={18} />
                 </button>
                 <button
                   type="button"
                   onClick={() => emblaApi?.scrollNext()}
-                  className="absolute right-3 top-1/2 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-white/20 bg-black/60 text-white transition-colors hover:bg-black/80"
-                  aria-label="Próxima imagem"
+                  className="absolute right-3 top-1/2 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full border border-white/20 bg-black/60 text-white transition-colors hover:bg-black/80"
+                  aria-label="Next image"
                 >
                   <ArrowRight size={18} />
                 </button>
@@ -204,27 +204,27 @@ export function ProjectModal({
 
           {project.problem && (
             <div className="mt-6">
-              <h3 className="text-sm font-medium text-foreground">Contexto</h3>
+              <h3 className="text-sm font-medium text-foreground">Context</h3>
               <p className="mt-1 text-sm text-muted-foreground">{project.problem}</p>
             </div>
           )}
 
           {project.solution && (
             <div className="mt-4">
-              <h3 className="text-sm font-medium text-foreground">Solução</h3>
+              <h3 className="text-sm font-medium text-foreground">Solution</h3>
               <p className="mt-1 text-sm text-muted-foreground">{project.solution}</p>
             </div>
           )}
 
           <div className="mt-4">
-            <h3 className="text-sm font-medium text-foreground">Descrição</h3>
+            <h3 className="text-sm font-medium text-foreground">Description</h3>
             <p className="mt-1 whitespace-pre-line text-sm leading-6 text-muted-foreground">
               {project.description}
             </p>
           </div>
 
           <div className="mt-4">
-            <h3 className="text-sm font-medium text-foreground">Tecnologias</h3>
+            <h3 className="text-sm font-medium text-foreground">Technologies</h3>
             <div className="mt-2 flex flex-wrap gap-2">
               {project.technologies.map((tech) => (
                 <span

@@ -47,8 +47,8 @@ export function Navbar() {
         <button
           type="button"
           onClick={() => setOpen((v) => !v)}
-          className="flex h-9 w-9 items-center justify-center rounded-full text-foreground md:hidden"
-          aria-label={open ? "Fechar menu" : "Abrir menu"}
+          className="flex h-10 w-10 items-center justify-center rounded-full text-foreground md:hidden"
+          aria-label={open ? "Close menu" : "Open menu"}
           aria-expanded={open}
         >
           {open ? <X size={18} /> : <Menu size={18} />}

@@ -39,11 +39,12 @@ export function Hero() {
 
         <motion.h1
           variants={item}
-          className="font-display text-4xl font-semibold leading-tight text-foreground sm:text-5xl md:text-6xl"
+          className="font-display text-3xl font-semibold leading-tight text-foreground sm:text-5xl md:text-6xl"
         >
           Hi, I&apos;m Gabriel.
           <br />
-          <p style={{ color: '#9a9aa5' }}>Full Stack developer building</p>
+          <span className="text-muted-foreground">Full Stack developer building</span>
+          <br />
           software &amp; data solutions.
         </motion.h1>
 
