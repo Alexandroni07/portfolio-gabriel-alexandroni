@@ -1,0 +1,65 @@
+"use client";
+
+import { motion } from "motion/react";
+import { ArrowUpRight, BriefcaseBusiness, GitBranch, Mail } from "lucide-react";
+
+const links = [
+  {
+    label: "Email",
+    value: "gaalexandroni@gmail.com",
+    href: "mailto:gaalexandroni@gmail.com",
+    icon: Mail,
+  },
+  {
+    label: "GitHub",
+    value: "github.com/Alexandroni07",
+    href: "https://github.com/Alexandroni07",
+    icon: GitBranch,
+  },
+  {
+    label: "LinkedIn",
+    value: "linkedin.com/in/gabriel-alexandroni",
+    href: "https://linkedin.com/in/gabriel-alexandroni",
+    icon: BriefcaseBusiness,
+  },
+];
+
+export function Contact() {
+  return (
+    <section id="contact" className="px-6 py-28">
+      <div className="mx-auto max-w-3xl text-center">
+        <h2 className="font-display text-3xl font-semibold text-foreground sm:text-5xl">
+          Let&apos;s build something together.
+        </h2>
+        <p className="mt-4 text-base text-muted-foreground sm:text-lg">
+          Tem um projeto em mente ou uma vaga que combina com o meu perfil?
+          Me manda uma mensagem.
+        </p>
+
+        <motion.a
+          href="mailto:gaalexandroni@gmail.com"
+          whileHover={{ scale: 1.03 }}
+          className="mt-8 inline-flex items-center gap-2 rounded-full bg-accent px-7 py-3.5 text-sm font-medium text-accent-foreground"
+        >
+          Say hello
+          <ArrowUpRight size={16} />
+        </motion.a>
+
+        <div className="mt-14 flex flex-col items-center gap-3 sm:flex-row sm:justify-center sm:gap-8">
+          {links.map(({ label, value, href, icon: Icon }) => (
+            <a
+              key={label}
+              href={href}
+              target={label === "Email" ? undefined : "_blank"}
+              rel={label === "Email" ? undefined : "noreferrer"}
+              className="flex items-center gap-2 text-sm text-muted-foreground transition-colors hover:text-foreground"
+            >
+              <Icon size={16} />
+              {value}
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}

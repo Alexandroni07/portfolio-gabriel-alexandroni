@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter, Space_Grotesk } from "next/font/google";
+import { MotionConfig } from "motion/react";
 import "./globals.css";
 
 const inter = Inter({
@@ -30,7 +31,7 @@ export default function RootLayout({
       className={`${inter.variable} ${spaceGrotesk.variable} scroll-smooth`}
     >
       <body className="bg-background font-sans text-foreground antialiased">
-        {children}
+        <MotionConfig reducedMotion="user">{children}</MotionConfig>
       </body>
     </html>
   );
