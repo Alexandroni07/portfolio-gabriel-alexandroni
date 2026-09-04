@@ -22,19 +22,19 @@ const pillars = [
     icon: Code2,
     title: "Software engineering",
     description:
-      "Formação em Engenharia de Software, com base em estrutura de dados, arquitetura e boas práticas de desenvolvimento.",
+      "Formation in Software Engineering, with a focus on data structures, architecture, and best practices of development.",
   },
   {
     icon: Server,
     title: "Full stack & backend",
     description:
-      "Interfaces em React e Angular ligadas a APIs REST em Java, com testes automatizados e integração contínua.",
+      "React and Angular interfaces connected to Java/Node.js REST APIs, with automated testing and continuous integration.",
   },
   {
     icon: LineChart,
     title: "Data & analytics",
     description:
-      "Dashboards e automações em Python (pandas, NumPy) para análise de dados e redução de trabalho manual.",
+      "Dashboards and automations in Python (pandas, NumPy) for data analysis and manual task reduction.",
   },
 ];
 
@@ -47,16 +47,13 @@ export function About() {
             About
           </h2>
           <p className="mt-6 text-base leading-relaxed text-muted-foreground sm:text-lg">
-            Sou engenheiro de software com mais de dois anos de experiência
-            construindo aplicações web e integrações backend. Atualmente
-            desenvolvo interfaces e APIs no dia a dia como Full Stack
-            developer e, em paralelo, atuo como estagiário de Data Science,
-            aplicando Python e automação a processos internos.
+            Software engineer with more than 2 years of dedicated experience. Experience at various levels of software
+            engineering development, from firmware development to modern web applications and REST APIs. Currently
+            working as a Full Stack Developer and Data Analyst.
           </p>
           <p className="mt-4 text-base leading-relaxed text-muted-foreground sm:text-lg">
-            Gosto de transitar entre essas três frentes: entender o problema
-            de negócio, construir a solução de ponta a ponta e usar dados
-            para validar se ela está funcionando.
+            I enjoy moving between these three fronts: understanding the business problem,
+            building an end-to-end solution, and using data to validate whether it is working.
           </p>
         </div>
 

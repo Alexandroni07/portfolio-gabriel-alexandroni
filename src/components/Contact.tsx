@@ -1,7 +1,8 @@
 "use client";
 
 import { motion } from "motion/react";
-import { ArrowUpRight, BriefcaseBusiness, GitBranch, Mail } from "lucide-react";
+import { ArrowUpRight, Mail } from "lucide-react";
+import { GithubIcon, LinkedinIcon } from "@/components/icons";
 
 const links = [
   {
@@ -14,13 +15,13 @@ const links = [
     label: "GitHub",
     value: "github.com/Alexandroni07",
     href: "https://github.com/Alexandroni07",
-    icon: GitBranch,
+    icon: GithubIcon,
   },
   {
     label: "LinkedIn",
     value: "linkedin.com/in/gabriel-alexandroni",
     href: "https://linkedin.com/in/gabriel-alexandroni",
-    icon: BriefcaseBusiness,
+    icon: LinkedinIcon,
   },
 ];
 

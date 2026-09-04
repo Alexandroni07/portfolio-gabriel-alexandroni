@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "motion/react";
-import { ArrowRight, Sparkles } from "lucide-react";
+import { ArrowRight, Sparkles, Hammer } from "lucide-react";
 
 const container = {
   hidden: {},
@@ -33,7 +33,7 @@ export function Hero() {
           variants={item}
           className="mb-8 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-1.5 text-sm text-muted-foreground"
         >
-          <Sparkles size={14} className="text-accent" />
+          <Hammer size={14} className="text-accent" />
           Let&apos;s build something together
         </motion.span>
 

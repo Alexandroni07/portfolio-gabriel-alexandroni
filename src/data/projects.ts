@@ -17,12 +17,12 @@ export type Project = {
 export const projects: Project[] = [
   {
     id: "placeholder-1",
-    title: "Nome do projeto 1",
+    title: "Kerigma Classroom",
     category: "Full Stack",
-    shortDescription: "Descrição curta pendente — substituir pelo projeto real.",
-    description: "Descrição completa pendente.",
-    technologies: ["React", "Java", "SQL"],
-    image: "/projects/placeholder-1.png",
+    shortDescription: "Plataforma web de gestão de catequese católica que permite administrar turmas, etapas pedagógicas, catequizandos e controle de frequência (incluindo chamada via QR Code). O sistema oferece dashboards personalizados por papel de usuário (catequista, coordenador, admin), além de cronograma, documentos, automações e auditoria de suporte.",
+    description:"Plataforma web de gestão de catequese católica que permite administrar turmas, etapas pedagógicas, catequizandos e controle de frequência (incluindo chamada via QR Code). O sistema oferece dashboards personalizados por papel de usuário (catequista, coordenador, admin), além de cronograma, documentos, automações e auditoria de suporte.",
+    technologies: ["React", "Node", "PostgreSQL", "TypeScript"],
+    image: "/projects/admin.png",
   },
   {
     id: "placeholder-2",

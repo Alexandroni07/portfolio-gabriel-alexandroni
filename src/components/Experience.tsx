@@ -10,7 +10,7 @@ export function Experience() {
 
   return (
     <section id="experience" className="px-6 py-28">
-      <div className="mx-auto max-w-3xl">
+      <div className="mx-auto max-w-5xl">
         <h2 className="font-display text-3xl font-semibold text-foreground sm:text-4xl">
           Experience
         </h2>

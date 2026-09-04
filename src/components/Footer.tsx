@@ -1,3 +1,5 @@
+import { GithubIcon, LinkedinIcon } from "@/components/icons";
+
 export function Footer() {
   return (
     <footer className="border-t border-white/10 px-6 py-8">
@@ -11,7 +13,7 @@ export function Footer() {
             rel="noreferrer"
             className="transition-colors hover:text-foreground"
           >
-            GitHub
+            <GithubIcon/>
           </a>
           <a
             href="https://linkedin.com/in/gabriel-alexandroni"
@@ -19,7 +21,7 @@ export function Footer() {
             rel="noreferrer"
             className="transition-colors hover:text-foreground"
           >
-            LinkedIn
+            <LinkedinIcon/>
           </a>
         </div>
       </div>

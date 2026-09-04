@@ -10,59 +10,59 @@ export type Experience = {
 
 export const experiences: Experience[] = [
   {
-    period: "Desde 12/2025",
-    role: "Estagiário de Data Science",
-    company: "Tribunal de Contas da União (TCU)",
-    location: "Brasília, DF — Remoto",
-    summary:
-      "Atuação na auditoria DAUTO, com foco em automação e inovação de processos internos de auditoria financeira.",
-    responsibilities: [
-      "Criação de dashboards para análise de dados públicos e verbas, usando Python (pandas, numpy).",
-      "Automatização de recálculos e rotinas repetitivas com Python e Power Automate.",
-      "Desenvolvimento de scripts para testes e validação de valores no banco de dados interno.",
-    ],
-    technologies: ["Python", "Azure", "SQL", "Fabric"],
-  },
-  {
-    period: "07/2024 – 11/2025",
-    role: "Desenvolvedor Full Stack",
+    period: "07/2024 to 11/2025",
+    role: "Full Stack Developer",
     company: "Zansk Tech",
-    location: "Brasília, DF — Remoto",
+    location: "Brasília, DF — Remote",
     summary:
-      "Criação e refatoração de interfaces em Angular e React, com backend em Java integrado a APIs REST.",
+      "Creation and refactoring of interfaces in Angular and React, with backend in Java integrated with REST APIs.",
     responsibilities: [
-      "Refatoração de fluxos existentes para reduzir complexidade e melhorar a manutenibilidade do código.",
-      "Criação e atualização de testes unitários e end-to-end, mantendo cobertura acima de 85%.",
-      "Validação de APIs e testes de integração com Postman antes de cada release.",
-      "Participação em pipelines de CI/CD, reduzindo o tempo de deploy manual.",
+    "Refactoring existing workflows to reduce complexity and improve code maintainability.",
+    "Creating and updating unit and end-to-end tests, maintaining over 85% coverage.",
+    "Validating APIs and performing integration tests using Postman prior to each release.",
+    "Participating in CI/CD pipelines, reducing manual deployment time.",
     ],
     technologies: ["Java", "Angular", "React", "Postman", "Jira", "Git", "SQL"],
   },
   {
-    period: "Desde 07/2024",
-    role: "Desenvolvedor Freelancer",
-    company: "Projetos independentes",
-    location: "Brasília, DF — Remoto",
+    period: "07/2024 to Present",
+    role: "Full Stack Developer",
+    company: "Independent projects",
+    location: "Brasília, DF — Remote",
     summary:
-      "Criação de landing pages, sites completos e sistemas do design ao deploy.",
+      "Creation of landing pages, complete websites and systems from design to deployment.",
     responsibilities: [
-      "Criação e validação de designs no Figma antes da implementação.",
-      "Desenvolvimento completo de sistemas em todos os níveis, do frontend ao backend.",
-      "Manutenção e suporte contínuo dos sistemas entregues.",
+      "Creation and validation of designs in Figma before implementation.",
+      "Complete development of systems at all levels, from frontend to backend.",
+      "Continuous maintenance and support of the delivered systems.",
     ],
     technologies: ["Node", "Angular", "React", "Postman", "Git", "SQL"],
   },
-  {
-    period: "05/2025 e 05/2026",
-    role: "Suporte Técnico",
-    company: "Eventos anuais da CNM (Marcha)",
-    location: "Brasília, DF — Presencial",
+   {
+    period: "12/2025 to Present",
+    role: "Data Science Intern",
+    company: "Tribunal de Contas da União (TCU)",
+    location: "Brasília, DF — Remote",
     summary:
-      "Suporte ao sistema de credenciamento em PHP durante evento nacional presencial.",
+      "Worked in the DAUTO audit team, focusing on the automation and innovation of internal financial audit processes.",
     responsibilities: [
-      "Assistência ao sistema de credenciamento e às máquinas locais durante o evento.",
-      "Consultas diretas ao banco de dados para identificação e resolução ágil de problemas.",
-      "Manutenção de falhas lógicas no sistema em PHP.",
+      "Creation of dashboards for analyzing public data and funds, using Python (pandas, numpy).",
+      "Automation of recalculations and repetitive routines using Python and Power Automate.",
+      "Development of scripts for testing and validation of values in the internal database.",
+    ],
+    technologies: ["Python", "Azure", "SQL", "Fabric"],
+  },
+  {
+    period: "05/2025 and 05/2026",
+    role: "Technical Support",
+    company: "Annual Events of the CNM (Marcha Event)",
+    location: "Brasília, DF — In-person",
+    summary:
+      "Technical support for the registration system in PHP during the national in-person event.",
+    responsibilities: [
+        "Support for the accreditation system and local workstations during the event.",
+        "Direct database queries for rapid problem identification and resolution.",
+        "Maintenance and troubleshooting of the PHP-based system.",
     ],
     technologies: ["PHP", "SQL", "Linux"],
   },
