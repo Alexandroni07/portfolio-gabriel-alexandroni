@@ -1,3 +1,13 @@
+export type ProjectImage = {
+  src: string;
+  alt: string;
+};
+
+export type ProjectLink = {
+  label: string;
+  href: string;
+};
+
 export type Project = {
   id: string;
   title: string;
@@ -7,7 +17,8 @@ export type Project = {
   problem?: string;
   solution?: string;
   technologies: string[];
-  image: string;
+  images: ProjectImage[];
+  links?: ProjectLink[];
   github?: string;
   demo?: string;
 };
@@ -19,10 +30,22 @@ export const projects: Project[] = [
     id: "placeholder-1",
     title: "Kerigma Classroom",
     category: "Full Stack",
-    shortDescription: "Plataforma web de gestão de catequese católica que permite administrar turmas, etapas pedagógicas, catequizandos e controle de frequência (incluindo chamada via QR Code). O sistema oferece dashboards personalizados por papel de usuário (catequista, coordenador, admin), além de cronograma, documentos, automações e auditoria de suporte.",
+    shortDescription: "Plataforma web de gestão de catequese católica que permite administrar turmas, etapas pedagógicas, catequizandos e controle de frequência.",
     description:"Plataforma web de gestão de catequese católica que permite administrar turmas, etapas pedagógicas, catequizandos e controle de frequência (incluindo chamada via QR Code). O sistema oferece dashboards personalizados por papel de usuário (catequista, coordenador, admin), além de cronograma, documentos, automações e auditoria de suporte.",
     technologies: ["React", "Node", "PostgreSQL", "TypeScript"],
-    image: "/projects/admin.png",
+    images: [
+      {
+        src: "/projects/login.png",
+        alt: "Dashboard administrativo do Kerigma Classroom",
+      },
+      {
+        src: "/projects/Admin.png",
+        alt: "Dashboard administrativo do Kerigma Classroom",
+      },
+    ],
+    links: [
+      { label: "GitHub", href: "https://github.com/Alexandroni07" },
+    ],
   },
   {
     id: "placeholder-2",
@@ -31,6 +54,6 @@ export const projects: Project[] = [
     shortDescription: "Descrição curta pendente — substituir pelo projeto real.",
     description: "Descrição completa pendente.",
     technologies: ["Node", "PostgreSQL"],
-    image: "/projects/placeholder-2.png",
+    images: [],
   },
 ];

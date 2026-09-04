@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import type { Project } from "@/data/projects";
 
 export function ProjectCard({
@@ -9,14 +10,24 @@ export function ProjectCard({
   project: Project;
   onOpen: () => void;
 }) {
+  const coverImage = project.images[0];
+
   return (
     <button
       type="button"
       onClick={onOpen}
       className="group flex h-full w-full flex-col overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02] text-left transition-colors hover:border-white/20"
     >
-      <div className="relative aspect-[4/3] w-full bg-white/5">
-        {/* substituir por <Image> quando tivermos os screenshots reais */}
+      <div className="relative aspect-[4/3] w-full overflow-hidden bg-white/5">
+        {coverImage && (
+          <Image
+            src={coverImage.src}
+            alt={coverImage.alt}
+            fill
+            sizes="(min-width: 1024px) 31vw, (min-width: 640px) 45vw, 85vw"
+            className="object-cover transition-transform duration-500 group-hover:scale-105"
+          />
+        )}
       </div>
 
       <div className="flex flex-1 flex-col p-5">

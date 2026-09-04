@@ -20,8 +20,7 @@ export function Projects() {
               Selected work
             </h2>
             <p className="mt-2 max-w-md text-sm text-muted-foreground sm:text-base">
-              Projetos que mostram como eu penso frontend, backend e dados
-              juntos.
+              Projects are a reflection of my skills, creativity, and dedication to delivering high-quality solutions.
             </p>
           </div>
 

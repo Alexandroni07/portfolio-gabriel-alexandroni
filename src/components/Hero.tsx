@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "motion/react";
-import { ArrowRight, Sparkles, Hammer } from "lucide-react";
+import { ArrowRight, Hammer } from "lucide-react";
 
 const container = {
   hidden: {},
