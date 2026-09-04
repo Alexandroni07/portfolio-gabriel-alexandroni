@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import useEmblaCarousel from "embla-carousel-react";
+import { motion } from "motion/react";
 import {
   Dialog,
   DialogContent,
@@ -16,6 +17,7 @@ import {
   ExternalLink,
   GitBranch,
   Link as LinkIcon,
+  Maximize2,
 } from "lucide-react";
 
 export function ProjectModal({
@@ -29,6 +31,7 @@ export function ProjectModal({
 }) {
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true });
   const [selectedIndex, setSelectedIndex] = useState(0);
+  const [isGalleryOpen, setIsGalleryOpen] = useState(false);
 
   useEffect(() => {
     emblaApi?.scrollTo(0, true);
@@ -49,12 +52,88 @@ export function ProjectModal({
   if (!project) return null;
 
   const images = project.images;
+  const handleOpenChange = (nextOpen: boolean) => {
+    if (!nextOpen) setIsGalleryOpen(false);
+    onOpenChange(nextOpen);
+  };
 
   return (
-    <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogContent className="max-h-[90vh] max-w-5xl overflow-y-auto border-white/10 bg-[#0b0b0f] p-0">
-        {images.length > 0 && (
-          <div className="relative overflow-hidden rounded-t-xl bg-white/5">
+    <Dialog open={open} onOpenChange={handleOpenChange}>
+      <DialogContent
+        className={`max-h-[95vh] overflow-y-auto border-white/10 bg-[#0b0b0f] p-0 ${
+          isGalleryOpen
+            ? "h-[70vh] w-[70vw] !max-w-[70vw] max-sm:h-[75vh] max-sm:w-[calc(100vw-1rem)] max-sm:!max-w-[calc(100vw-1rem)]"
+            : "max-w-5xl"
+        }`}
+      >
+        {isGalleryOpen ? (
+          <motion.div
+            initial={{ opacity: 0, scale: 0.96 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.28, ease: [0.16, 1, 0.3, 1] }}
+            className="relative flex h-full min-h-0 items-center overflow-hidden rounded-xl bg-black"
+          >
+            <div ref={emblaRef} className="w-full overflow-hidden">
+              <div className="flex">
+                {images.map((image) => (
+                  <div
+                    key={image.src}
+                    className="relative h-[70vh] min-w-0 flex-[0_0_100%] max-sm:h-[75vh]"
+                  >
+                    <Image
+                      src={image.src}
+                      alt={image.alt}
+                      fill
+                      sizes="(min-width: 1280px) 1152px, 100vw"
+                      className="object-contain"
+                    />
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <button
+              type="button"
+              onClick={() => setIsGalleryOpen(false)}
+              className="absolute left-4 top-4 inline-flex items-center gap-2 rounded-full border border-white/20 bg-black/70 px-3 py-2 text-sm text-white transition-colors hover:bg-black/90"
+              aria-label="Voltar para os detalhes do projeto"
+            >
+              <ArrowLeft size={16} />
+              Voltar
+            </button>
+
+            {images.length > 1 && (
+              <>
+                <button
+                  type="button"
+                  onClick={() => emblaApi?.scrollPrev()}
+                  className="absolute left-3 top-1/2 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-white/20 bg-black/60 text-white transition-colors hover:bg-black/80"
+                  aria-label="Imagem anterior"
+                >
+                  <ArrowLeft size={18} />
+                </button>
+                <button
+                  type="button"
+                  onClick={() => emblaApi?.scrollNext()}
+                  className="absolute right-3 top-1/2 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-white/20 bg-black/60 text-white transition-colors hover:bg-black/80"
+                  aria-label="Próxima imagem"
+                >
+                  <ArrowRight size={18} />
+                </button>
+                <span className="absolute bottom-4 left-1/2 -translate-x-1/2 rounded-full bg-black/70 px-3 py-1 text-xs text-white">
+                  {selectedIndex + 1} / {images.length}
+                </span>
+              </>
+            )}
+          </motion.div>
+        ) : (
+          images.length > 0 && (
+          <motion.div
+            initial={{ opacity: 0, y: 8 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.24, ease: [0.16, 1, 0.3, 1] }}
+            className="relative overflow-hidden rounded-t-xl bg-white/5"
+          >
             <div ref={emblaRef} className="overflow-hidden">
               <div className="flex">
                 {images.map((image) => (
@@ -73,6 +152,15 @@ export function ProjectModal({
                 ))}
               </div>
             </div>
+
+            <button
+              type="button"
+              onClick={() => setIsGalleryOpen(true)}
+              className="absolute left-3 top-3 flex h-10 w-10 items-center justify-center rounded-full border border-white/20 bg-black/60 text-white transition-colors hover:bg-black/80"
+              aria-label="Ampliar fotos"
+            >
+              <Maximize2 size={18} />
+            </button>
 
             {images.length > 1 && (
               <>
@@ -97,10 +185,16 @@ export function ProjectModal({
                 </span>
               </>
             )}
-          </div>
+          </motion.div>
+          )
         )}
 
-        <div className="p-6 sm:p-8">
+        {!isGalleryOpen && <motion.div
+          initial={{ opacity: 0, y: 8 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.24, delay: 0.04, ease: [0.16, 1, 0.3, 1] }}
+          className="p-6 sm:p-8"
+        >
           <DialogHeader className="items-start text-left">
             <span className="text-xs font-medium text-accent">{project.category}</span>
             <DialogTitle className="font-display text-2xl text-foreground">
@@ -178,7 +272,7 @@ export function ProjectModal({
               )}
             </div>
           )}
-        </div>
+        </motion.div>}
       </DialogContent>
     </Dialog>
   );

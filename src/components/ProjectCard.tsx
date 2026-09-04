@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import { motion } from "motion/react";
 import type { Project } from "@/data/projects";
 
 export function ProjectCard({
@@ -13,9 +14,11 @@ export function ProjectCard({
   const coverImage = project.images[0];
 
   return (
-    <button
+    <motion.button
       type="button"
       onClick={onOpen}
+      whileTap={{ scale: 0.985 }}
+      transition={{ duration: 0.18, ease: "easeOut" }}
       className="group flex h-full w-full flex-col overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02] text-left transition-colors hover:border-white/20"
     >
       <div className="relative aspect-[4/3] w-full overflow-hidden bg-white/5">
@@ -54,6 +57,6 @@ export function ProjectCard({
           View case study
         </span>
       </div>
-    </button>
+    </motion.button>
   );
 }

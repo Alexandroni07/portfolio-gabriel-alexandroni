@@ -20,6 +20,9 @@ export const metadata: Metadata = {
   title: "Gabriel Alexandroni — Full Stack Developer",
   description:
     "Portfólio de Gabriel Alexandroni: desenvolvimento Full Stack, APIs REST e soluções orientadas a dados.",
+  icons: {
+    icon: "/icons/favicon.png",
+  },
 };
 
 export default function RootLayout({
