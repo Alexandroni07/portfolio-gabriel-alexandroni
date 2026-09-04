@@ -43,8 +43,7 @@ export function Hero() {
         >
           Hi, I&apos;m Gabriel.
           <br />
-          Full Stack developer building
-          <br />
+          <p style={{ color: '#9a9aa5' }}>Full Stack developer building</p>
           software &amp; data solutions.
         </motion.h1>
 

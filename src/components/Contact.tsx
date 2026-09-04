@@ -38,7 +38,7 @@ export function Contact() {
         </p>
 
         <motion.a
-          href="https://wa.me/5561992131701?text=Olá%2C%20Vim%20pelo%20se%20site!"
+          href="https://wa.me/5561992131701?text=Olá%2C%20Vim%20pelo%20seu%20site!"
           target="_blank"
           whileHover={{ scale: 1.03 }}
           className="mt-8 inline-flex items-center gap-2 rounded-full bg-accent px-7 py-3.5 text-sm font-medium text-accent-foreground"

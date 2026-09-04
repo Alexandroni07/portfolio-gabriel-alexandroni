@@ -40,7 +40,7 @@ export function ProjectCard({
         </p>
 
         <div className="mt-4 flex flex-wrap gap-2">
-          {project.technologies.slice(0, 4).map((tech) => (
+          {project.technologies.map((tech) => (
             <span
               key={tech}
               className="rounded-full border border-white/10 px-2.5 py-1 text-xs text-muted-foreground"
