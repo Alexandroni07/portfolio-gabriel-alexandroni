@@ -33,12 +33,13 @@ export function Contact() {
           Let&apos;s build something together.
         </h2>
         <p className="mt-4 text-base text-muted-foreground sm:text-lg">
-          Tem um projeto em mente ou uma vaga que combina com o meu perfil?
-          Me manda uma mensagem.
+          Do you have a project in mind or a position that matches my profile? 
+          Send me a message.
         </p>
 
         <motion.a
-          href="mailto:gaalexandroni@gmail.com"
+          href="https://wa.me/5561992131701?text=Olá%2C%20Vim%20pelo%20se%20site!"
+          target="_blank"
           whileHover={{ scale: 1.03 }}
           className="mt-8 inline-flex items-center gap-2 rounded-full bg-accent px-7 py-3.5 text-sm font-medium text-accent-foreground"
         >

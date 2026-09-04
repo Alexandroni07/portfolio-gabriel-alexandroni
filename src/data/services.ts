@@ -7,21 +7,22 @@ export const services: Service[] = [
   {
     title: "Full Stack Development",
     description:
-      "Aplicações completas, do frontend ao backend, com React, Angular, Node e Java.",
+      "Full-stack applications from frontend to backend using React, Angular, Node, and Java.",
   },
   {
     title: "Backend & APIs",
     description:
-      "APIs REST bem estruturadas, integrações e regras de negócio com foco em manutenibilidade.",
+      "Well-structured REST APIs, integrations, and business rules focused on maintainability.",
+
   },
   {
     title: "Data & Analytics",
     description:
-      "Dashboards, automações e análise de dados com Python, pandas e Power BI.",
+      "Dashboards, automations and data analysis with Python, pandas and Power BI.",
   },
   {
     title: "Landing Pages & Websites",
     description:
-      "Sites e landing pages do design no Figma até o deploy, com foco em performance.",
+      "Websites and landing pages from design in Figma to deployment, with focus on performance.",
   },
 ];

@@ -17,7 +17,7 @@ export function Projects() {
         <div className="flex items-end justify-between gap-4">
           <div>
             <h2 className="font-display text-3xl font-semibold text-foreground sm:text-4xl">
-              Selected work
+              Selected Work / Project
             </h2>
             <p className="mt-2 max-w-md text-sm text-muted-foreground sm:text-base">
               Projects are a reflection of my skills, creativity, and dedication to delivering high-quality solutions.
