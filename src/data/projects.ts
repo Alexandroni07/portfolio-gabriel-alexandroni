@@ -75,8 +75,8 @@ export const projects: Project[] = [
       }
     ],
     links: [
-      { label: "Protótipo", href: "https://www.figma.com/design/tJNfiOKkPmLxu5IaT2ybzF/Site-da-catequese?node-id=89-180&t=sF0R4s2AKA5XfGHj-1" },
-      { label: "Site", href: "https://kerigma-classroom.vercel.app/" },
+      { label: "First Prototype", href: "https://www.figma.com/design/tJNfiOKkPmLxu5IaT2ybzF/Site-da-catequese?node-id=89-180&t=sF0R4s2AKA5XfGHj-1" },
+      { label: "WebSite", href: "https://kerigma-classroom.vercel.app/" },
     ],
   },
   {
@@ -114,9 +114,9 @@ export const projects: Project[] = [
     ],
     links: [
       { label: "GitHub", href: "https://github.com/unb-mds/2025-2-OncoMap" },
-      { label: "Documentação", href: "https://unb-mds.github.io/2025-2-OncoMap/"},
+      { label: "Documentation", href: "https://unb-mds.github.io/2025-2-OncoMap/"},
       { label: "Story Map", href: "https://www.figma.com/board/8Jsltq8BOL65CsMoRWFjik/Template-MDS--Copy-?node-id=0-1&p=f&t=JH6OD1aH87OWOi89-0" },
-      { label: "Site", href: "https://oncomap.onrender.com/" },
+      { label: "WebSite", href: "https://oncomap.onrender.com/" },
     ],
   },
 ];

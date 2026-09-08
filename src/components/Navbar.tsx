@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { Menu, X } from "lucide-react";
+import { Download, Menu, X } from "lucide-react";
 
 const NAV_LINKS = [
   { href: "#home", label: "Home" },
@@ -37,12 +37,22 @@ export function Navbar() {
           ))}
         </ul>
 
-        <Link
-          href="#contact"
-          className="hidden rounded-full bg-accent px-5 py-2 text-sm font-medium text-accent-foreground transition-transform hover:scale-[1.03] md:inline-flex"
-        >
-          Contact
-        </Link>
+        <div className="hidden items-center gap-2 md:flex">
+          <a
+            href="/ResumeGabrielAlexandroni.pdf"
+            download
+            className="inline-flex items-center gap-2 rounded-full border border-white/15 px-5 py-2 text-sm font-medium text-foreground transition-colors hover:bg-white/5"
+          >
+            <Download size={14} />
+            Resume
+          </a>
+          <Link
+            href="#contact"
+            className="inline-flex items-center gap-2 rounded-full bg-accent px-5 py-2 text-sm font-medium text-accent-foreground transition-transform hover:scale-[1.03]"
+          >
+            Contact
+          </Link>
+        </div>
 
         <button
           type="button"
@@ -69,6 +79,17 @@ export function Navbar() {
                 </Link>
               </li>
             ))}
+            <li>
+              <a
+                href="/ResumeGabrielAlexandroni.pdf"
+                download
+                onClick={() => setOpen(false)}
+                className="mt-1 flex items-center justify-center gap-2 rounded-xl border border-white/15 px-4 py-3 text-sm font-medium text-foreground"
+              >
+                <Download size={14} />
+                Resume
+              </a>
+            </li>
             <li>
               <Link
                 href="#contact"
