@@ -22,7 +22,7 @@ const pillars = [
     icon: Code2,
     title: "Software engineering",
     description:
-      "Formation in Software Engineering, with a focus on data structures, architecture, and best practices of development.",
+      "Currently pursuing a degree in Software Engineering, with a focus on data structures, architecture, and development best practices.",
   },
   {
     icon: Server,
