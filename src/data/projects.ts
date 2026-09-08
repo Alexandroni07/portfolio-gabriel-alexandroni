@@ -119,4 +119,46 @@ export const projects: Project[] = [
       { label: "WebSite", href: "https://oncomap.onrender.com/" },
     ],
   },
+  {
+    id: "placeholder-3",
+    title: "Alexandroni.dev",
+    category: "Frontend / Portfolio",
+    shortDescription: "A personal portfolio website built with Next.js, showcasing projects, skills, and contact information.",
+    description:"Alexandroni.dev is a personal portfolio website built with Next.js, designed to showcase my projects, skills, and contact information. The site features a clean and modern design, with sections for an introduction, project portfolio, skills, and a contact form. It is fully responsive and optimized for performance, providing a seamless user experience across different devices.",
+    technologies: ["React", "Next.js", "TypeScript", "Tailwind CSS"],
+    images: [
+      {
+        src: "/projects/portfolio/home.png",
+        alt: "Home section",
+      },
+      {
+        src: "/projects/portfolio/about.png",
+        alt: "About section",
+      },
+      {
+        src: "/projects/portfolio/stack.png",
+        alt: "Stack section",
+      },
+      {
+        src: "/projects/portfolio/experience.png",
+        alt: "Experience section",
+      },
+      {
+        src: "/projects/portfolio/projects.png",
+        alt: "Projects section",
+      },
+      {
+        src: "/projects/portfolio/services.png",
+        alt: "Services section",
+      },
+      {
+        src: "/projects/portfolio/footer.png",
+        alt: "Footer section",
+      }
+    ],
+    links: [
+      { label: "GitHub", href: "https://github.com/Alexandroni07/portfolio-gabriel-alexandroni" },
+      { label: "WebSite", href: "https://gabrielalexandronidev.vercel.app/" },
+    ],
+  },
 ];
