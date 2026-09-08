@@ -38,7 +38,7 @@ export const projects: Project[] = [
         alt: "Login page",
       },
       {
-        src: "/projects/KerigmaClass/principal.png",
+        src: "/projects/KerigmaClass/Principal.png",
         alt: "Home Page",
       },
       {
