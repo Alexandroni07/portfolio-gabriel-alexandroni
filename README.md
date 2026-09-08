@@ -1,36 +1,118 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Gabriel Alexandroni — Portfolio
+
+Personal portfolio built to showcase my work as a Full Stack Developer, with a secondary focus on data analytics and automation. Single-page, dark-themed, fully responsive site with static content (no backend/CMS).
+
+[WebSite](https://gabrielalexandronidev.vercel.app)
+
+## Tech Stack
+
+- **Framework:** [Next.js](https://nextjs.org/) (App Router) + [React](https://react.dev/)
+- **Language:** TypeScript
+- **Styling:** [Tailwind CSS v4](https://tailwindcss.com/)
+- **UI Components:** [shadcn/ui](https://ui.shadcn.com/) (Dialog)
+- **Animation:** [Motion](https://motion.dev/) (formerly Framer Motion)
+- **Carousel:** [Embla Carousel](https://www.embla-carousel.com/)
+- **Icons:** [Lucide](https://lucide.dev/) + custom SVGs for brand logos (GitHub, LinkedIn)
+- **Deployment:** [Vercel](https://vercel.com/)
+
+## Features
+
+- Responsive layout for mobile, tablet, and desktop
+- Sticky pill-shaped navbar with smooth-scroll anchor navigation and a mobile menu
+- Animated hero section with a single orchestrated entrance sequence
+- About section highlighting three core focus areas: software engineering, full stack/backend, and data & analytics
+- Tech stack grouped by domain (Frontend, Backend, Data, Cloud & Dev)
+- Expandable experience timeline
+- Project carousel with a detail modal, including an expandable image gallery
+- Services section with a short offering breakdown
+- Contact section with direct links (email, GitHub, LinkedIn)
+- One-click resume download from the navbar
+- Respects `prefers-reduced-motion` for all animations
+
+## Project Structure
+
+```
+src/
+├── app/
+│   ├── globals.css      # Design tokens, base styles, background effects
+│   ├── layout.tsx        # Root layout, fonts, metadata
+│   └── page.tsx           # Page composition (section order)
+├── components/
+│   ├── ui/                # shadcn/ui components
+│   ├── icons.tsx          # Custom brand icons (GitHub, LinkedIn)
+│   ├── Navbar.tsx
+│   ├── Hero.tsx
+│   ├── About.tsx
+│   ├── Skills.tsx
+│   ├── Experience.tsx
+│   ├── Projects.tsx
+│   ├── ProjectCard.tsx
+│   ├── ProjectModal.tsx
+│   ├── Services.tsx
+│   ├── Contact.tsx
+│   └── Footer.tsx
+├── data/
+│   ├── projects.ts
+│   ├── experience.ts
+│   ├── skills.ts
+│   └── services.ts
+└── lib/
+    └── utils.ts
+public/
+├── icons/
+├── images/
+├── projects/
+└── resume.pdf
+```
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
+
+- Node.js 20+
+- npm
+
+### Installation
+
+```bash
+git clone https://github.com/Alexandroni07/portfolio-gabriel-alexandroni.git
+cd portfolio-gabriel-alexandroni
+npm install
+```
+
+### Development
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Production build
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run build
+npm run start
+```
 
-## Learn More
+## Deployment
 
-To learn more about Next.js, take a look at the following resources:
+The project is deployed on [Vercel](https://vercel.com/), with automatic production deploys on every push to `main` and preview deploys for other branches/pull requests. No environment variables are required, since the site is fully static.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Content Updates
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- **Projects:** edit `src/data/projects.ts` and add corresponding images to `public/projects/`.
+- **Experience:** edit `src/data/experience.ts`.
+- **Skills:** edit `src/data/skills.ts`.
+- **Services:** edit `src/data/services.ts`.
+- **Resume:** replace `public/resume.pdf`.
 
-## Deploy on Vercel
+## Contact
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- Email: gaalexandroni@gmail.com
+- GitHub: [github.com/Alexandroni07](https://github.com/Alexandroni07)
+- LinkedIn: [linkedin.com/in/gabriel-alexandroni](https://linkedin.com/in/gabriel-alexandroni)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## License
+
+This project is personal and not licensed for reuse or redistribution.
