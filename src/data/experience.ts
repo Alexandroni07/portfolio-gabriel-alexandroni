@@ -25,6 +25,21 @@ export const experiences: Experience[] = [
     technologies: ["Java", "Angular", "React", "Postman", "Jira", "Git", "SQL"],
   },
   {
+    period: "12/2025 to Present",
+    role: "Apis support Intern",
+    company: "Centro Cooperativo Sicoob",
+    location: "Brasília, DF — Hybrid Work",
+    summary:
+      "Worked in the DAUTO audit team, focusing on the automation and innovation of internal financial audit processes.",
+    responsibilities: [
+      "Providing technical support and consulting for developers integrating APIs (Pix, bill payments, OAuth 2.0, mTLS ICP-Brasil, and webhooks). ",
+      "Managing, documenting, and auditing technical tickets via ServiceDesk, ensuring strict SLA compliance and process accuracy. ",
+      "Running, validating, and testing APIs for diagnostic and onboarding environments using Postman and Swagger.",
+      "Restructuring and innovating external ticketing flows to streamline response times and minimize rework. ",
+    ],
+    technologies: ["Postman", "Swagger", "Java", "ServiceDesk Platform", "REST APIs", "OAuth 2.0", "Webhooks"],
+  },
+  {
     period: "07/2024 to Present",
     role: "Independent Full Stack Developer",
     company: "Independent projects",
