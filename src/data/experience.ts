@@ -26,7 +26,7 @@ export const experiences: Experience[] = [
   },
   {
     period: "12/2025 to Present",
-    role: "Apis support Intern",
+    role: "APIs support Intern",
     company: "Centro Cooperativo Sicoob",
     location: "Brasília, DF — Hybrid Work",
     summary:
