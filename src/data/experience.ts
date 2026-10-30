@@ -30,7 +30,7 @@ export const experiences: Experience[] = [
     company: "Centro Cooperativo Sicoob",
     location: "Brasília, DF — Hybrid Work",
     summary:
-      "Worked in the DAUTO audit team, focusing on the automation and innovation of internal financial audit processes.",
+      "Provided technical consulting and support for developers integrating payment and authentication APIs, auditing ServiceDesk flows, and validating REST endpoints using Postman and Swagger.",
     responsibilities: [
       "Providing technical support and consulting for developers integrating APIs (Pix, bill payments, OAuth 2.0, mTLS ICP-Brasil, and webhooks). ",
       "Managing, documenting, and auditing technical tickets via ServiceDesk, ensuring strict SLA compliance and process accuracy. ",
